@@ -11,7 +11,7 @@ array.count
 //adicionar itens no array
 array.append(7)
 
-//adicionar em um ponto expecifico
+//adicionar em um ponto especifico
 array.insert("2", at: 1)
 
 
@@ -19,4 +19,19 @@ array.insert("2", at: 1)
 
 array.removeLast()
 
+//remover indice de um local especifico
+
+array.remove(at: 3)
+
 print(array)
+
+
+//novo array baguncado
+var array1 = [1, 6, 4, 2, 3, 5, 7]
+
+//ordear o array
+print(array1)
+array1.sort()
+print(array1)
+
+

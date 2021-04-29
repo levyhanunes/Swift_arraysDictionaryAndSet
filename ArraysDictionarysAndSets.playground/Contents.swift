@@ -35,3 +35,42 @@ array1.sort()
 print(array1)
 
 
+
+
+
+//MARK: - Dictionary
+//dicionarios diferente do array nao possuem ordem e geralmente acessamos o dado inserindo uma chave
+
+var dicionario = ["chave1" : "valor1", "chave2" : "valor2", "chave3" : "valor3"]
+
+print(dicionario)
+
+//usando a chave1 acessamos o valor da chave1
+dicionario["chave1"]
+
+
+//pode usar o any nas chaves e valores tambem!
+var dicionario2 : [String : Any] = ["chave1" : 1, "chave2" : 2.234, "chave3" : "chave_string", "chave4" : true]
+
+//adicionar valores ao dicionario
+
+//metodo1
+dicionario2["ChaveAdicionar"] = "ValorAdicionado"
+print(dicionario2)
+//metodo2
+dicionario2.updateValue(123, forKey: "123" )
+print(dicionario2)
+
+////alterar o valor de uma chave
+
+dicionario2.updateValue("Novo Valor", forKey: "chave3")
+print(dicionario2)
+
+//remover item do dicionario
+
+dicionario2.remove(at: dicionario2.index(forKey: "chave1")!)
+print(dicionario2)
+
+
+
+

@@ -71,6 +71,48 @@ print(dicionario2)
 dicionario2.remove(at: dicionario2.index(forKey: "chave1")!)
 print(dicionario2)
 
+//MARK: - SET conjuntos que nao contem ordenacao
+
+var set = Set([1, 2, 3, 4, 5, 6])
+print(set)
 
 
+//ordenar valores
+set.sorted()
+print(set)
 
+
+//set nao permite elementos duplicados!
+
+var setWithDuplicatedElements = Set([1, 2, 3, 4, 5, 6, 6, 6, 6, 6])
+setWithDuplicatedElements.sorted()
+print(setWithDuplicatedElements)
+
+
+//adicionar itens ao set
+set.insert(10)
+set.insert(7)
+print(setWithDuplicatedElements)
+
+//remover itens do set
+
+set.removeFirst()
+print(setWithDuplicatedElements)
+
+let animals = Set(["dog", "cat", "horse", "chicken"])
+var farmAnimals = Set(["horse", "chicken"])
+
+farmAnimals.isSubset(of: animals)
+
+animals.isSuperset(of: farmAnimals)
+
+let savanaAnimals = Set(["leon", "elephant"])
+
+savanaAnimals.isSuperset(of: animals)
+
+//existe algum animal em expecifico
+farmAnimals.isDisjoint(with: savanaAnimals)
+
+farmAnimals.insert("elephant")
+
+farmAnimals.isDisjoint(with: savanaAnimals)
